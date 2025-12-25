@@ -1,0 +1,5360 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرایشگاه زیبایی نگار</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<style type="text/css" id="dcoder_stylesheet">/* تنظیمات اصلی و فارسی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+:root {
+    --primary-color: #6d4c9c;
+    --secondary-color: #e91e63;
+    --accent-color: #ff9800;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+    --info-color: #2196f3;
+    --dark-color: #2c2c2c;
+    --light-color: #f9f7f7;
+    --gray-color: #666666;
+    --light-gray: #eeeeee;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* رفع مشکل فارسی */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.8;
+    text-align: right;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+/* جلوگیری از حرکت افقی سایت */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* تضمین فارسی بودن تمام متن‌ها */
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, label, input, textarea, select, button {
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* رفع مشکل تراز */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.container, 
+.header-container,
+.nav-menu,
+.services-grid,
+.gallery-grid,
+.booking-container,
+.footer-content,
+.admin-stats-grid,
+.admin-tabs,
+.table-responsive,
+.services-grid-admin,
+.settings-grid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* هدر - تراز اصلاح شده */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.logo h1 span {
+    color: #ffd700;
+}
+
+.logo p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* منو - تراز اصلاح شده */
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: var(--transition);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* پنل کاربر */
+.user-panel {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.user-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 140px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.user-avatar-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 20px;
+    margin-top: 10px;
+    display: none;
+    z-index: 1000;
+    border: 1px solid #eee;
+}
+
+.user-toggle:hover + .user-dropdown,
+.user-dropdown:hover {
+    display: block;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.user-mode-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.user-mode-option:hover {
+    background: #f5f5f5;
+}
+
+.user-mode-option.active {
+    background: #f0e6ff;
+    color: var(--primary-color);
+}
+
+.mode-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    margin-right: auto;
+}
+
+.user-mode-option.active .mode-indicator {
+    background: var(--primary-color);
+}
+
+.admin-login-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.btn-login-admin {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.btn-login-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(109, 76, 156, 0.3);
+}
+
+/* بخش اصلی */
+.main-content {
+    padding-top: 20px;
+}
+
+/* بخش خوش‌آمدگویی */
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f9f7f7 0%, #f0e6ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(109, 76, 156, 0.3);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.image-frame {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* قالب‌های رنگ */
+.color-template {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.color-template::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    z-index: 1;
+}
+
+.template-content {
+    position: relative;
+    z-index: 2;
+}
+
+.color-template i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.color-template h3, .color-template h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.color-template p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* تم‌های رنگی */
+.beauty-template {
+    background: linear-gradient(135deg, #6d4c9c 0%, #8a6dc7 100%);
+}
+
+.hair-template {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+}
+
+.hair-light-template {
+    background: linear-gradient(135deg, #DEB887 0%, #F4A460 100%);
+}
+
+.skin-template {
+    background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+}
+
+.makeup-template {
+    background: linear-gradient(135deg, #FF1493 0%, #C71585 100%);
+}
+
+.makeup-light-template {
+    background: linear-gradient(135deg, #FFC0CB 0%, #FF69B4 100%);
+}
+
+.nails-template {
+    background: linear-gradient(135deg, #FF6347 0%, #FF4500 100%);
+}
+
+/* بخش خدمات */
+.services {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--dark-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray-color);
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    cursor: pointer;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--white);
+    font-size: 32px;
+    transition: all 0.3s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #ff4081 100%);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.service-card p {
+    color: var(--gray-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-click-info {
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* بخش گالری */
+.gallery-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.gallery-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 600;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    height: 250px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-rating {
+    color: #ffd700;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* بخش امتیازدهی */
+.rating-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.rating-overall {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f5ff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.overall-score {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.score-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.score-stars {
+    color: #ffd700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.score-text, .total-reviews {
+    color: var(--gray-color);
+    font-size: 14px;
+}
+
+.rating-bars {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.rating-bar span:first-child {
+    width: 80px;
+    text-align: left;
+}
+
+.rating-bar span:last-child {
+    width: 40px;
+    text-align: left;
+}
+
+.bar-container {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.rating-form {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.star-rating-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.stars i {
+    font-size: 24px;
+    color: #ddd;
+    transition: var(--transition);
+}
+
+.stars i.active, .stars i:hover {
+    color: #ffd700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* بهبود ورودی‌های فارسی */
+input[type="text"], 
+input[type="tel"], 
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 16px;
+    transition: var(--transition);
+    background: #f9f9f9;
+    text-align: right;
+}
+
+input[dir="rtl"], textarea[dir="rtl"] {
+    text-align: right;
+}
+
+input[dir="ltr"] {
+    text-align: left;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(109, 76, 156, 0.1);
+    background: white;
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+.reviews-container {
+    margin-top: 40px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.review-service {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.review-stars {
+    color: #ffd700;
+}
+
+.review-content {
+    color: var(--dark-color);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+}
+
+/* بخش نوبت‌گیری */
+.booking {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f9f7f7 0%, #f0e6ff 100%);
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.booking-form {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.text-input-container {
+    position: relative;
+}
+
+.hint-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    text-align: right;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-inputs input {
+    width: 80px;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 16px;
+}
+
+.date-inputs span {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.booking-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.stat i {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 800;
+    display: block;
+    color: var(--dark-color);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.booking-features {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.booking-features h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking-features ul {
+    list-style: none;
+}
+
+.booking-features li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking-features li i {
+    color: var(--success-color);
+}
+
+/* بخش تماس */
+.contact {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-item {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    background: #f0e6ff;
+}
+
+.contact-item i {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.contact-item p {
+    color: var(--gray-color);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact-map iframe {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* صفحات خدمات */
+.service-page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.service-page {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.service-header {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.service-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-service {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.close-service:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(90deg);
+}
+
+.service-content {
+    padding: 30px;
+}
+
+.service-details {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+.service-image {
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.service-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.service-info > p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.service-list h4 {
+    font-size: 18px;
+    margin: 25px 0 15px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-list ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.service-list li {
+    padding: 8px 0;
+    padding-right: 25px;
+    position: relative;
+    color: var(--gray-color);
+}
+
+.service-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.service-pricing {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f9f5ff;
+    border-radius: 15px;
+}
+
+.service-pricing h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-table td {
+    padding: 12px 0;
+    color: var(--gray-color);
+}
+
+.pricing-table td:first-child {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.pricing-table td:last-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.service-cta {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* فوتر */
+.footer {
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    color: white;
+    padding: 60px 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-logo p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-rating .stars {
+    color: #ffd700;
+}
+
+.footer-rating span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-right: 5px;
+}
+
+.footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.newsletter h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form button {
+    width: 45px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background: #5a3e82;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* استایل‌های پنل مدیریت */
+.admin-header-page {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.admin-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.admin-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #ffd700;
+}
+
+.admin-logo p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.admin-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-time {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-admin {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-logout {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    color: white;
+}
+
+.btn-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.admin-main-content {
+    padding: 30px 0;
+    background: #f8f9fa;
+    min-height: calc(100vh - 100px);
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    border-left: 5px solid;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-primary { border-color: #6d4c9c; }
+.stat-success { border-color: #4caf50; }
+.stat-warning { border-color: #ff9800; }
+.stat-info { border-color: #2196f3; }
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.stat-primary .stat-icon { background: #6d4c9c; }
+.stat-success .stat-icon { background: #4caf50; }
+.stat-warning .stat-icon { background: #ff9800; }
+.stat-info .stat-icon { background: #2196f3; }
+
+.stat-info h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.stat-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-trend {
+    margin-right: auto;
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.admin-tab {
+    padding: 12px 24px;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-tab.active {
+    background: linear-gradient(135deg, #6d4c9c 0%, #8a6dc7 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(109, 76, 156, 0.3);
+}
+
+.admin-tab:hover:not(.active) {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-header h2 {
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.appointments-filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #555;
+}
+
+.filter-group select, .filter-group input {
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Vazirmatn', sans-serif;
+    min-width: 1000px;
+}
+
+.admin-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: right;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.admin-table tr:hover {
+    background: #f8f9ff;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-confirmed { background: #e8f5e9; color: #2e7d32; }
+.status-pending { background: #fff3e0; color: #ef6c00; }
+.status-cancelled { background: #ffebee; color: #c62828; }
+.status-completed { background: #e3f2fd; color: #1565c0; }
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.btn-action {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-edit { background: #2196f3; }
+.btn-delete { background: #f44336; }
+.btn-confirm { background: #4caf50; }
+.btn-view { background: #9c27b0; }
+.btn-sms { background: #00bcd4; }
+
+.btn-action:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.customer-rating {
+    color: #ffd700;
+    font-size: 14px;
+}
+
+.reviews-container-admin {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.reviews-list {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.review-card-admin {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.review-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.reviewer-info-admin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reviewer-avatar-admin {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6d4c9c 0%, #8a6dc7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.review-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.review-status.pending { background: #fff3e0; color: #ef6c00; }
+.review-status.approved { background: #e8f5e9; color: #2e7d32; }
+
+.review-stars-admin {
+    color: #ffd700;
+    margin-top: 5px;
+}
+
+.review-admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: flex-end;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-success { background: #4caf50; color: white; }
+.btn-danger { background: #f44336; color: white; }
+
+.btn-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.services-grid-admin {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card-admin {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.service-card-admin:hover {
+    transform: translateY(-5px);
+}
+
+.service-card-header {
+    padding: 25px 25px 15px;
+    background: linear-gradient(135deg, #6d4c9c 0%, #8a6dc7 100%);
+    color: white;
+    text-align: center;
+}
+
+.service-icon-admin {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card-header h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.service-price-admin {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.service-card-body {
+    padding: 20px;
+}
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+.service-card-actions {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.settings-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.settings-card h3 {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.password-display, .login-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.login-record {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #f0f0f0;
+}
+
+.status.success {
+    color: #4caf50;
+    font-weight: 600;
+}
+
+/* مودال‌ها */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 25px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #f44336;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* انیمیشن‌ها */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(109, 76, 156, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(109, 76, 156, 0.5);
+    }
+}
+
+/* اعمال انیمیشن‌ها */
+.service-card:hover {
+    animation: float 3s ease-in-out infinite;
+}
+
+.btn-primary:hover {
+    animation: pulse 1.5s infinite;
+}
+
+.color-template:hover {
+    animation: glow 2s infinite;
+    transform: scale(1.05);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.slide-in-up {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* اسکرول بار زیبا */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8a6dc7 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a3e82 0%, #7359b5 100%);
+}
+
+/* حذف اسکرول افقی در تمامی المان‌ها */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* پیش‌لودر */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ریسپانسیو */
+@media (max-width: 1200px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .navbar {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+    
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .rating-overall {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .admin-header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .admin-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .admin-tabs {
+        flex-direction: column;
+    }
+    
+    .admin-tab {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .tab-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .date-inputs input {
+        width: 70px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .appointments-filters {
+        flex-direction: column;
+    }
+    
+    .filter-group select, .filter-group input {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .actions-cell {
+        flex-direction: column;
+        min-width: 120px;
+    }
+    
+    .btn-action {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .user-toggle {
+        min-width: 120px;
+        padding: 6px 10px;
+    }
+    
+    .date-inputs input {
+        width: 60px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid-admin {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* کلاس‌های اعتبارسنجی */
+.valid {
+    border-color: #4caf50 !important;
+    background-color: rgba(76, 175, 80, 0.05) !important;
+}
+
+.invalid {
+    border-color: #f44336 !important;
+    background-color: rgba(244, 67, 54, 0.05) !important;
+}
+
+/* رفع مشکل width در المان‌های فرم */
+input, textarea, select {
+    max-width: 100%;
+}
+
+/* تضمین عدم حرکت افقی در موبایل */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .user-toggle {
+        min-width: 120px;
+        padding: 6px 10px;
+    }
+    
+    .services-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .date-inputs {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .date-inputs input {
+        width: 60px;
+    }
+    
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* اسکرول عمودی نرم */
+html {
+    scroll-behavior: smooth;
+}
+
+/* جلوگیری از overflow در المان‌های خاص */
+.service-page,
+.modal-content,
+.admin-table,
+.table-responsive {
+    max-width: 100vw;
+}
+
+/* مودال ویرایش خدمت */
+#editServiceModal .modal-content {
+    max-width: 600px;
+}
+
+/* انیمیشن برای تغییرات */
+@keyframes highlightChange {
+    0% { background-color: #ffffcc; }
+    100% { background-color: transparent; }
+}
+
+.service-updated {
+    animation: highlightChange 2s ease;
+}
+
+/* بهبود استایل فرم‌ها */
+#editServiceForm .form-group {
+    margin-bottom: 20px;
+}
+
+#editServiceForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+#editServiceForm input,
+#editServiceForm select,
+#editServiceForm textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Vazirmatn', sans-serif;
+    transition: all 0.3s;
+}
+
+#editServiceForm input:focus,
+#editServiceForm select:focus,
+#editServiceForm textarea:focus {
+    border-color: #6d4c9c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(109, 76, 156, 0.1);
+}</style></head>
+<body>
+    <!-- هدر سایت -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo animate__animated animate__fadeInDown">
+                <h1>آرایشگاه <span>نگار</span></h1>
+                <p>مرکز تخصصی زیبایی و آرایش</p>
+            </div>
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active" data-aos="fade-down" data-aos-delay="100">خانه</a></li>
+                    <li><a href="#services" class="nav-link" data-aos="fade-down" data-aos-delay="200">خدمات</a></li>
+                    <li><a href="#gallery" class="nav-link" data-aos="fade-down" data-aos-delay="300">گالری</a></li>
+                    <li><a href="#booking" class="nav-link" data-aos="fade-down" data-aos-delay="400">نوبت‌گیری</a></li>
+                    <li><a href="#contact" class="nav-link" data-aos="fade-down" data-aos-delay="500">تماس با ما</a></li>
+                </ul>
+            </nav>
+            
+            <!-- پنل کاربر - طراحی جدید -->
+            <div class="user-panel">
+                <div class="user-toggle" id="userToggle" data-aos="fade-down" data-aos-delay="600">
+                    <div class="user-avatar-small">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span id="userStatus">مشتری</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="dropdown-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span>انتخاب حالت</span>
+                    </div>
+                    
+                    <div class="user-mode-option active" data-mode="customer" onclick="setUserMode('customer')">
+                        <i class="fas fa-user"></i>
+                        <span>حالت مشتری</span>
+                        <div class="mode-indicator"></div>
+                    </div>
+                    
+                    <div class="user-mode-option" data-mode="admin" onclick="showAdminLogin()">
+                        <i class="fas fa-crown"></i>
+                        <span>حالت مدیریت</span>
+                        <div class="mode-indicator"></div>
+                    </div>
+                    
+                    <div class="admin-login-section" id="adminLoginSection">
+                        <div class="form-group">
+                            <label for="adminPassword"><i class="fas fa-lock"></i> رمز مدیریت</label>
+                            <input type="password" id="adminPassword" placeholder="رمز را وارد کنید">
+                        </div>
+                        <button class="btn-login-admin" onclick="loginAsAdmin()">
+                            <i class="fas fa-sign-in-alt"></i> ورود به مدیریت
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- صفحه اصلی (فقط در حالت مشتری نمایش داده می‌شود) -->
+    <div id="customerPage">
+        <!-- بخش اصلی -->
+        <main class="main-content">
+            <!-- بخش خوش‌آمدگویی -->
+            <section class="hero" id="home">
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-right" data-aos-delay="300">
+                        <h2 class="animate__animated animate__fadeInUp">زیبایی شما، اولویت ماست</h2>
+                        <p class="animate__animated animate__fadeInUp animate__delay-1s">با بهترین خدمات آرایشی، پوستی و مراقبتی در محیطی لوکس و بهداشتی</p>
+                        <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                            <a href="#booking" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i> رزرو نوبت آنلاین
+                            </a>
+                            <a href="#services" class="btn btn-secondary">
+                                <i class="fas fa-eye"></i> مشاهده خدمات
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image" data-aos="fade-left" data-aos-delay="500">
+                        <div class="image-frame">
+                            <div class="color-template beauty-template">
+                                <div class="template-content">
+                                    <i class="fas fa-spa"></i>
+                                    <h3>زیبایی و آرایش</h3>
+                                    <p>تخصصی‌ترین خدمات زیبایی</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش خدمات -->
+            <section class="services" id="services">
+                <div class="container">
+                    <h2 class="section-title animate__animated animate__fadeInDown">خدمات تخصصی ما</h2>
+                    <div class="services-grid">
+                        <!-- هر سرویس قابل کلیک است -->
+                        <div class="service-card" data-service="hair" onclick="openServicePage('hair')" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h3>آرایش مو</h3>
+                            <p>کوتاهی، رنگ، هایلایت، مش و انواع خدمات تخصصی آرایش مو</p>
+                            <span class="price">از 150,000 تومان</span>
+                            <div class="service-click-info">
+                                <i class="fas fa-mouse-pointer"></i> برای جزئیات کلیک کنید
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-service="skin" onclick="openServicePage('skin')" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h3>مراقبت پوست</h3>
+                            <p>فیشیال، میکرودرم، لیزر و انواع خدمات پوستی تخصصی</p>
+                            <span class="price">از 300,000 تومان</span>
+                            <div class="service-click-info">
+                                <i class="fas fa-mouse-pointer"></i> برای جزئیات کلیک کنید
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-service="makeup" onclick="openServicePage('makeup')" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>آرایش صورت</h3>
+                            <p>آرایش عروس، آرایش شب، آرایش روز و انواع تکنیک‌های آرایشی</p>
+                            <span class="price">از 200,000 تومان</span>
+                            <div class="service-click-info">
+                                <i class="fas fa-mouse-pointer"></i> برای جزئیات کلیک کنید
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-service="nails" onclick="openServicePage('nails')" data-aos="fade-up" data-aos-delay="400">
+                            <div class="service-icon">
+                                <i class="fas fa-hand-sparkles"></i>
+                            </div>
+                            <h3>ناخن‌کاری</h3>
+                            <p>مانیکور، پدیکور، ناخن مصنوعی، ژلیش و طراحی ناخن</p>
+                            <span class="price">از 120,000 تومان</span>
+                            <div class="service-click-info">
+                                <i class="fas fa-mouse-pointer"></i> برای جزئیات کلیک کنید
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش گالری جدید -->
+            <section class="gallery-section" id="gallery">
+                <div class="container">
+                    <h2 class="section-title animate__animated animate__fadeInDown">نمونه کارها</h2>
+                    <p class="section-subtitle">با بهترین کیفیت و جدیدترین تکنیک‌ها</p>
+                    
+                    <div class="gallery-filter">
+                        <button class="filter-btn active" data-filter="all">همه</button>
+                        <button class="filter-btn" data-filter="hair">آرایش مو</button>
+                        <button class="filter-btn" data-filter="makeup">آرایش صورت</button>
+                        <button class="filter-btn" data-filter="nails">ناخن‌کاری</button>
+                        <button class="filter-btn" data-filter="skin">مراقبت پوست</button>
+                    </div>
+                    
+                    <div class="gallery-grid">
+                        <!-- قالب‌های رنگ به جای عکس -->
+                        <div class="gallery-item" data-category="hair" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="color-template hair-template">
+                                <div class="template-content">
+                                    <i class="fas fa-cut"></i>
+                                    <h4>رنگ و هایلایت مو</h4>
+                                    <p>کار شده روی مشتری خانم</p>
+                                    <div class="gallery-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="makeup" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="color-template makeup-template">
+                                <div class="template-content">
+                                    <i class="fas fa-palette"></i>
+                                    <h4>آرایش عروس</h4>
+                                    <p>آرایش سنتی و مدرن</p>
+                                    <div class="gallery-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="nails" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="color-template nails-template">
+                                <div class="template-content">
+                                    <i class="fas fa-hand-sparkles"></i>
+                                    <h4>طراحی ناخن</h4>
+                                    <p>طرح‌های فانتزی و ساده</p>
+                                    <div class="gallery-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="skin" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="color-template skin-template">
+                                <div class="template-content">
+                                    <i class="fas fa-spa"></i>
+                                    <h4>فیشیال پوست</h4>
+                                    <p>پاکسازی و جوانسازی</p>
+                                    <div class="gallery-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="hair" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="color-template hair-light-template">
+                                <div class="template-content">
+                                    <i class="fas fa-cut"></i>
+                                    <h4>کوتاهی مدرن</h4>
+                                    <p>طرح‌های روز دنیا</p>
+                                    <div class="gallery-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="makeup" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="color-template makeup-light-template">
+                                <div class="template-content">
+                                    <i class="fas fa-palette"></i>
+                                    <h4>آرایش شب</h4>
+                                    <p>مناسب مهمانی و مراسم</p>
+                                    <div class="gallery-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش امتیازدهی جدید -->
+            <section class="rating-section" id="ratings">
+                <div class="container">
+                    <h2 class="section-title">امتیازدهی و نظرات</h2>
+                    <p class="section-subtitle">تجربه مشتریان ما از خدمات آرایشگاه</p>
+                    
+                    <div class="rating-overall">
+                        <div class="overall-score">
+                            <div class="score-number">۴.۸</div>
+                            <div class="score-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="score-text">از ۵ امتیاز</div>
+                            <div class="total-reviews">بر اساس ۱۲۴ نظر</div>
+                        </div>
+                        
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>۵ ستاره</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 75%"></div>
+                                </div>
+                                <span>۷۵٪</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>۴ ستاره</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 18%"></div>
+                                </div>
+                                <span>۱۸٪</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>۳ ستاره</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 5%"></div>
+                                </div>
+                                <span>۵٪</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>۲ ستاره</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 1%"></div>
+                                </div>
+                                <span>۱٪</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>۱ ستاره</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 1%"></div>
+                                </div>
+                                <span>۱٪</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rating-form">
+                        <h3>امتیاز خود را ثبت کنید</h3>
+                        <div class="star-rating-input">
+                            <span>امتیاز شما:</span>
+                            <div class="stars">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <span id="selectedRatingText">هیچ امتیازی انتخاب نشده</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewName">نام شما</label>
+                            <input type="text" id="reviewName" placeholder="نام خود را وارد کنید" dir="rtl">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewComment">نظر شما</label>
+                            <textarea id="reviewComment" rows="3" placeholder="تجربه خود از خدمات ما را بنویسید..." dir="rtl"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewService">نوع خدمت دریافت شده</label>
+                            <select id="reviewService" dir="rtl">
+                                <option value="">انتخاب کنید</option>
+                                <option value="آرایش مو">آرایش مو</option>
+                                <option value="مراقبت پوست">مراقبت پوست</option>
+                                <option value="آرایش صورت">آرایش صورت</option>
+                                <option value="ناخن‌کاری">ناخن‌کاری</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="submitReview()">
+                            <i class="fas fa-paper-plane"></i> ارسال نظر و امتیاز
+                        </button>
+                    </div>
+                    
+                    <div class="reviews-container">
+                        <h3>آخرین نظرات</h3>
+                        <div class="reviews-grid" id="reviewsGrid">
+                            <!-- نظرات با JavaScript لود می‌شوند -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش نوبت‌گیری -->
+            <section class="booking" id="booking">
+                <div class="container">
+                    <h2 class="section-title animate__animated animate__fadeInDown">رزرو نوبت آنلاین</h2>
+                    <div class="booking-container">
+                        <div class="booking-form" data-aos="fade-right" data-aos-delay="300">
+                            <form id="appointmentForm">
+                                <div class="form-group">
+                                    <label for="fullname"><i class="fas fa-user"></i> نام و نام خانوادگی</label>
+                                    <input type="text" id="fullname" required placeholder="نام کامل خود را وارد کنید" dir="rtl">
+                                    <small class="hint-text">می‌توانید فارسی یا انگلیسی وارد کنید</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> شماره تماس</label>
+                                    <input type="tel" id="phone" required placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service"><i class="fas fa-concierge-bell"></i> نوع خدمت</label>
+                                    <div class="text-input-container">
+                                        <input type="text" id="service" required placeholder="مثال: آرایش مو، مراقبت پوست، آرایش صورت، ناخن‌کاری" list="serviceSuggestions" dir="rtl">
+                                        <datalist id="serviceSuggestions">
+                                            <option value="آرایش مو">
+                                            </option><option value="مراقبت پوست">
+                                            </option><option value="آرایش صورت">
+                                            </option><option value="ناخن‌کاری">
+                                            </option><option value="پکیج کامل">
+                                        </option></datalist>
+                                        <small class="hint-text">می‌توانید از لیست انتخاب کنید یا تایپ کنید</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="date"><i class="fas fa-calendar-alt"></i> تاریخ مراجعه</label>
+                                        <div class="date-inputs">
+                                            <input type="number" id="day" min="1" max="31" placeholder="روز" required>
+                                            <span>/</span>
+                                            <input type="number" id="month" min="1" max="12" placeholder="ماه" required>
+                                            <span>/</span>
+                                            <input type="number" id="year" min="1400" max="1500" placeholder="سال" required>
+                                        </div>
+                                        <small class="hint-text">مثال: 15/09/1402</small>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="time"><i class="fas fa-clock"></i> ساعت مراجعه</label>
+                                        <input type="number" id="time" min="9" max="18" required placeholder="9-18">
+                                        <small class="hint-text">ساعت کاری: ۹ صبح تا ۶ عصر</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="notes"><i class="fas fa-sticky-note"></i> توضیحات (اختیاری)</label>
+                                    <textarea id="notes" rows="3" placeholder="توضیحات خاص یا درخواست‌های ویژه..." dir="rtl"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-check-circle"></i> ثبت و رزرو نوبت
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <div class="booking-info" data-aos="fade-left" data-aos-delay="500">
+                            <div class="booking-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="stat-number" id="totalCustomers">۰</span>
+                                        <span class="stat-label">مشتری راضی</span>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <span class="stat-number">۴.۸</span>
+                                        <span class="stat-label">امتیاز از ۵</span>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-award"></i>
+                                    <div>
+                                        <span class="stat-number">۵+</span>
+                                        <span class="stat-label">سال تجربه</span>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-certificate"></i>
+                                    <div>
+                                        <span class="stat-number">۱۰۰%</span>
+                                        <span class="stat-label">رضایت مشتری</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="booking-features">
+                                <h3><i class="fas fa-check-circle"></i> مزایای رزرو آنلاین</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> نوبت‌دهی فوری و آنی</li>
+                                    <li><i class="fas fa-check"></i> امکان انتخاب آرایشگر</li>
+                                    <li><i class="fas fa-check"></i> اطلاع‌رسانی پیامکی</li>
+                                    <li><i class="fas fa-check"></i> تخفیف‌های ویژه آنلاین</li>
+                                    <li><i class="fas fa-check"></i> پشتیبانی ۲۴ ساعته</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش تماس -->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <h2 class="section-title">تماس با ما</h2>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>آدرس</h3>
+                                    <p>تهران، خیابان ولیعصر، پلاک ۱۲۳۴</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>تلفن</h3>
+                                    <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
+                                    <p>۰۹۱۲۳۴۵۶۷۸۹</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>ساعات کاری</h3>
+                                    <p>هر روز از ۹ صبح تا ۹ شب</p>
+                                    <p>جمعه‌ها از ۱۰ صبح تا ۸ شب</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>ایمیل</h3>
+                                    <p>info@negarbeauty.com</p>
+                                    <p>support@negarbeauty.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.676338844645!2d51.38990131513406!3d35.68919738019174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0108b9e4b3c5%3A0x6b4bc7c2b6b4b3c5!2sTehran%2C%20Iran!5e0!3m2!1sen!2s!4v1649876543210!5m2!1sen!2s" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- صفحات خدمات -->
+        <!-- صفحه آرایش مو -->
+        <div class="service-page-overlay" id="hairServiceOverlay">
+            <div class="service-page">
+                <div class="service-header">
+                    <h2><i class="fas fa-cut"></i> خدمات آرایش مو</h2>
+                    <button class="close-service" onclick="closeServicePage()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="service-content">
+                    <div class="service-details">
+                        <div class="service-image">
+                            <div class="color-template hair-template">
+                                <div class="template-content">
+                                    <i class="fas fa-cut"></i>
+                                    <h3>آرایش مو</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-info">
+                            <h3>خدمات تخصصی آرایش مو</h3>
+                            <p>با تیم متخصص آرایش موی ما، زیبایی موهای خود را به اوج برسانید. ما با استفاده از بهترین محصولات و جدیدترین تکنیک‌های روز دنیا، خدمات زیر را ارائه می‌دهیم:</p>
+                            
+                            <div class="service-list">
+                                <h4><i class="fas fa-check"></i> کوتاهی و استایل‌دهی</h4>
+                                <ul>
+                                    <li>کوتاهی زنانه و مردانه با جدیدترین مدل‌ها</li>
+                                    <li>لایه‌ای، فر کردن، صاف کردن</li>
+                                    <li>مشاوره تخصصی برای انتخاب بهترین استایل</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> رنگ‌ موی تخصصی</h4>
+                                <ul>
+                                    <li>رنگ‌های دائمی، نیمه دائمی و موقت</li>
+                                    <li>هایلایت، بابیلایت، اومبره</li>
+                                    <li>رنگ‌های فانتزی و خاص</li>
+                                    <li>پوشش کامل سفیدی مو</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> مش و هایلایت</h4>
+                                <ul>
+                                    <li>مش کلاسیک و مدرن</li>
+                                    <li>هایلایت با فویل و کلاه</li>
+                                    <li>تکنیک بالیاژ و سامبو</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> درمان و مراقبت</h4>
+                                <ul>
+                                    <li>ماسک‌های درمانی و تغذیه مو</li>
+                                    <li>کراتینه و بوتاکس مو</li>
+                                    <li>درمان موهای آسیب دیده</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-pricing">
+                                <h4>لیست قیمت‌ها (تقریبی)</h4>
+                                <table class="pricing-table">
+                                    <tbody><tr>
+                                        <td>کوتاهی ساده</td>
+                                        <td>150,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>کوتاهی و استایل</td>
+                                        <td>250,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>رنگ موی کامل</td>
+                                        <td>350,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>هایلایت با فویل</td>
+                                        <td>400,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>مش (کلاسیک)</td>
+                                        <td>300,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>کراتینه مو</td>
+                                        <td>600,000 تومان</td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            
+                            <div class="service-cta">
+                                <button class="btn btn-primary" onclick="scrollToBooking()">
+                                    <i class="fas fa-calendar-plus"></i> رزرو نوبت برای آرایش مو
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحه مراقبت پوست -->
+        <div class="service-page-overlay" id="skinServiceOverlay">
+            <div class="service-page">
+                <div class="service-header">
+                    <h2><i class="fas fa-spa"></i> خدمات مراقبت پوست</h2>
+                    <button class="close-service" onclick="closeServicePage()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="service-content">
+                    <div class="service-details">
+                        <div class="service-image">
+                            <div class="color-template skin-template">
+                                <div class="template-content">
+                                    <i class="fas fa-spa"></i>
+                                    <h3>مراقبت پوست</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-info">
+                            <h3>خدمات تخصصی مراقبت پوست</h3>
+                            <p>با پیشرفته‌ترین دستگاه‌ها و محصولات مراقبت پوست، زیبایی و سلامت پوست خود را تضمین کنید.</p>
+                            
+                            <div class="service-list">
+                                <h4><i class="fas fa-check"></i> فیشیال تخصصی</h4>
+                                <ul>
+                                    <li>پاکسازی عمیق پوست</li>
+                                    <li>لایه‌برداری و جوانسازی</li>
+                                    <li>ماسک‌های درمانی اختصاصی</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> لیزر و IPL</h4>
+                                <ul>
+                                    <li>لیزر موهای زائد</li>
+                                    <li>تکنیک‌های جوانسازی پوست</li>
+                                    <li>درمان لک و آکنه</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> میکرونیدلینگ</h4>
+                                <ul>
+                                    <li>درمان اسکار و جای جوش</li>
+                                    <li>جوانسازی و کلاژن سازی</li>
+                                    <li>کاهش چین و چروک</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> بوتاکس و فیلر</h4>
+                                <ul>
+                                    <li>تزریق تخصصی بوتاکس</li>
+                                    <li>فیلرهای جوانساز</li>
+                                    <li>لیفت صورت غیرجراحی</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-pricing">
+                                <h4>لیست قیمت‌ها (تقریبی)</h4>
+                                <table class="pricing-table">
+                                    <tbody><tr>
+                                        <td>فیشیال پایه</td>
+                                        <td>300,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>فیشیال پیشرفته</td>
+                                        <td>500,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>لیزر موهای زائد (جلسه)</td>
+                                        <td>200,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>میکرونیدلینگ</td>
+                                        <td>800,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>بوتاکس (ناحیه)</td>
+                                        <td>1,500,000 تومان</td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            
+                            <div class="service-cta">
+                                <button class="btn btn-primary" onclick="scrollToBooking()">
+                                    <i class="fas fa-calendar-plus"></i> رزرو نوبت برای مراقبت پوست
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحه آرایش صورت -->
+        <div class="service-page-overlay" id="makeupServiceOverlay">
+            <div class="service-page">
+                <div class="service-header">
+                    <h2><i class="fas fa-palette"></i> خدمات آرایش صورت</h2>
+                    <button class="close-service" onclick="closeServicePage()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="service-content">
+                    <div class="service-details">
+                        <div class="service-image">
+                            <div class="color-template makeup-template">
+                                <div class="template-content">
+                                    <i class="fas fa-palette"></i>
+                                    <h3>آرایش صورت</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-info">
+                            <h3>خدمات تخصصی آرایش صورت</h3>
+                            <p>با هنرمندان آرایش ما، در هر مراسمی بدرخشید. از آرایش روزمره تا آرایش عروس.</p>
+                            
+                            <div class="service-list">
+                                <h4><i class="fas fa-check"></i> آرایش عروس</h4>
+                                <ul>
+                                    <li>آرایش سنتی و مدرن عروس</li>
+                                    <li>مشاوره رایگان قبل از مراسم</li>
+                                    <li>آرایش همراه در محل عروسی</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> آرایش شب و مهمانی</h4>
+                                <ul>
+                                    <li>آرایش‌های فانتزی و خاص</li>
+                                    <li>اسموکی و کت‌آی</li>
+                                    <li>آرایش برای عکاسی</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> آرایش روزمره</h4>
+                                <ul>
+                                    <li>آرایش نیمه دائمی</li>
+                                    <li>آموزش آرایش شخصی</li>
+                                    <li>میکاپ حرفه‌ای</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> خدمات ویژه</h4>
+                                <ul>
+                                    <li>آرایش برای تئاتر و سینما</li>
+                                    <li>میکاپ هنری</li>
+                                    <li>آرایش کودک و نوجوان</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-pricing">
+                                <h4>لیست قیمت‌ها (تقریبی)</h4>
+                                <table class="pricing-table">
+                                    <tbody><tr>
+                                        <td>آرایش روز</td>
+                                        <td>200,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>آرایش شب</td>
+                                        <td>300,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>آرایش عروس (ساده)</td>
+                                        <td>1,500,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>آرایش عروس (VIP)</td>
+                                        <td>2,500,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>آموزش آرایش</td>
+                                        <td>500,000 تومان</td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            
+                            <div class="service-cta">
+                                <button class="btn btn-primary" onclick="scrollToBooking()">
+                                    <i class="fas fa-calendar-plus"></i> رزرو نوبت برای آرایش صورت
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحه ناخن‌کاری -->
+        <div class="service-page-overlay" id="nailsServiceOverlay">
+            <div class="service-page">
+                <div class="service-header">
+                    <h2><i class="fas fa-hand-sparkles"></i> خدمات ناخن‌کاری</h2>
+                    <button class="close-service" onclick="closeServicePage()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="service-content">
+                    <div class="service-details">
+                        <div class="service-image">
+                            <div class="color-template nails-template">
+                                <div class="template-content">
+                                    <i class="fas fa-hand-sparkles"></i>
+                                    <h3>ناخن‌کاری</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-info">
+                            <h3>خدمات تخصصی ناخن‌کاری</h3>
+                            <p>با طراحی‌های خلاقانه و کیفیت عالی، زیبایی دستان خود را به رخ بکشید.</p>
+                            
+                            <div class="service-list">
+                                <h4><i class="fas fa-check"></i> مانیکور</h4>
+                                <ul>
+                                    <li>مانیکور کلاسیک و ژاپنی</li>
+                                    <li>مانیکور خشک و بدون آب</li>
+                                    <li>مانیکور مخصوص آقایان</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> پدیکور</h4>
+                                <ul>
+                                    <li>پدیکور تخصصی</li>
+                                    <li>درمان مشکلات پا</li>
+                                    <li>ماساژ و ریلکسیشن</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> ناخن مصنوعی</h4>
+                                <ul>
+                                    <li>ناخن اکریلیک</li>
+                                    <li>ناخن ژله‌ای</li>
+                                    <li>ناخن پودری</li>
+                                </ul>
+                                
+                                <h4><i class="fas fa-check"></i> طراحی ناخن</h4>
+                                <ul>
+                                    <li>نقاشی دستی</li>
+                                    <li>استیکر و انتقالی</li>
+                                    <li>سنگ و اکسسوری</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-pricing">
+                                <h4>لیست قیمت‌ها (تقریبی)</h4>
+                                <table class="pricing-table">
+                                    <tbody><tr>
+                                        <td>مانیکور ساده</td>
+                                        <td>120,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>پدیکور</td>
+                                        <td>150,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ناخن اکریلیک</td>
+                                        <td>300,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>طراحی ساده</td>
+                                        <td>50,000 تومان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>طراحی ویژه</td>
+                                        <td>100,000 تومان</td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            
+                            <div class="service-cta">
+                                <button class="btn btn-primary" onclick="scrollToBooking()">
+                                    <i class="fas fa-calendar-plus"></i> رزرو نوبت برای ناخن‌کاری
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- فوتر -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>آرایشگاه نگار</h3>
+                        <p>تخصصی‌ترین مرکز زیبایی و آرایش در تهران</p>
+                        <div class="footer-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>۴.۸ از ۵ (۱۲۴ نظر)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>خدمات ما</h4>
+                        <ul>
+                            <li><a href="#services" onclick="openServicePage('hair')">آرایش مو</a></li>
+                            <li><a href="#services" onclick="openServicePage('skin')">مراقبت پوست</a></li>
+                            <li><a href="#services" onclick="openServicePage('makeup')">آرایش صورت</a></li>
+                            <li><a href="#services" onclick="openServicePage('nails')">ناخن‌کاری</a></li>
+                            <li><a href="#gallery">گالری کارها</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>لینک‌های مفید</h4>
+                        <ul>
+                            <li><a href="#home">خانه</a></li>
+                            <li><a href="#booking">نوبت‌گیری</a></li>
+                            <li><a href="#ratings">نظرات</a></li>
+                            <li><a href="#contact">تماس با ما</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <h4>شبکه‌های اجتماعی</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                        
+                        <div class="newsletter">
+                            <h4>عضویت در خبرنامه</h4>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="ایمیل خود را وارد کنید" dir="ltr">
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© ۱۴۰۲ کلیه حقوق برای آرایشگاه زیبایی نگار محفوظ است.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- پنل مدیریت پیشرفته -->
+    <div id="adminPage" style="display: none;">
+        <div class="admin-header-page">
+            <div class="container">
+                <div class="admin-header-content">
+                    <div class="admin-logo">
+                        <h1><i class="fas fa-crown"></i> پنل مدیریت آرایشگاه نگار</h1>
+                        <p>مدیریت کامل نوبت‌ها، مشتریان و خدمات</p>
+                    </div>
+                    
+                    <div class="admin-controls">
+                        <button class="btn-admin btn-logout" onclick="logoutAdmin()">
+                            <i class="fas fa-sign-out-alt"></i> خروج از مدیریت
+                        </button>
+                        <div class="admin-time" id="adminCurrentTime">
+                            <!-- زمان به صورت زنده لود می‌شود -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-main-content">
+            <div class="container">
+                <!-- آمار کلی -->
+                <div class="admin-stats-grid">
+                    <div class="stat-card stat-primary" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminTodayCount">۰</h3>
+                            <p>نوبت امروز</p>
+                        </div>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>۱۲٪+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-success" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminTotalCustomers">۰</h3>
+                            <p>کل مشتریان</p>
+                        </div>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>۸٪+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-warning" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminTodayIncome">۰ تومان</h3>
+                            <p>درآمد امروز</p>
+                        </div>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>۱۵٪+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-info" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminAvgRating">۰</h3>
+                            <p>میانگین امتیاز</p>
+                        </div>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>۵٪+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بخش‌های مدیریت -->
+                <div class="admin-sections">
+                    <!-- تب‌های مدیریت -->
+                    <div class="admin-tabs">
+                        <button class="admin-tab active" onclick="openAdminTab('appointments')">
+                            <i class="fas fa-calendar-alt"></i> مدیریت نوبت‌ها
+                        </button>
+                        <button class="admin-tab" onclick="openAdminTab('customers')">
+                            <i class="fas fa-users"></i> مدیریت مشتریان
+                        </button>
+                        <button class="admin-tab" onclick="openAdminTab('reviews')">
+                            <i class="fas fa-comments"></i> مدیریت نظرات
+                        </button>
+                        <button class="admin-tab" onclick="openAdminTab('services')">
+                            <i class="fas fa-concierge-bell"></i> مدیریت خدمات
+                        </button>
+                        <button class="admin-tab" onclick="openAdminTab('settings')">
+                            <i class="fas fa-cog"></i> تنظیمات
+                        </button>
+                    </div>
+
+                    <!-- محتوای تب‌ها -->
+                    <div class="admin-tab-content" id="appointmentsTab">
+                        <div class="tab-header">
+                            <h2><i class="fas fa-calendar-alt"></i> مدیریت نوبت‌ها</h2>
+                            <button class="btn-admin btn-primary" onclick="showAddAppointmentModal()">
+                                <i class="fas fa-plus"></i> افزودن نوبت جدید
+                            </button>
+                        </div>
+                        
+                        <div class="appointments-filters">
+                            <div class="filter-group">
+                                <label><i class="fas fa-filter"></i> فیلتر بر اساس:</label>
+                                <select id="appointmentFilter" onchange="filterAppointments()">
+                                    <option value="all">همه نوبت‌ها</option>
+                                    <option value="today">نوبت‌های امروز</option>
+                                    <option value="pending">در انتظار تأیید</option>
+                                    <option value="confirmed">تأیید شده</option>
+                                    <option value="cancelled">لغو شده</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label><i class="fas fa-search"></i> جستجو:</label>
+                                <input type="text" id="appointmentSearch" placeholder="جستجو بر اساس نام، تلفن یا خدمت..." onkeyup="searchAppointments()">
+                            </div>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>شناسه</th>
+                                        <th>نام مشتری</th>
+                                        <th>شماره تماس</th>
+                                        <th>خدمت</th>
+                                        <th>تاریخ</th>
+                                        <th>ساعت</th>
+                                        <th>وضعیت</th>
+                                        <th>توضیحات</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="appointmentsTableBody">
+                                    <!-- نوبت‌ها با JavaScript لود می‌شوند -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="admin-tab-content" id="customersTab" style="display: none;">
+                        <div class="tab-header">
+                            <h2><i class="fas fa-users"></i> مدیریت مشتریان</h2>
+                            <button class="btn-admin btn-primary" onclick="exportCustomers()">
+                                <i class="fas fa-file-export"></i> خروجی Excel
+                            </button>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>شناسه</th>
+                                        <th>نام کامل</th>
+                                        <th>شماره تماس</th>
+                                        <th>تاریخ عضویت</th>
+                                        <th>تعداد نوبت‌ها</th>
+                                        <th>مجموع هزینه</th>
+                                        <th>امتیاز</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="customersTableBody">
+                                    <!-- مشتریان با JavaScript لود می‌شوند -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="admin-tab-content" id="reviewsTab" style="display: none;">
+                        <div class="tab-header">
+                            <h2><i class="fas fa-comments"></i> مدیریت نظرات</h2>
+                            <div class="review-stats">
+                                <span class="stat-badge pending" id="pendingReviewsCount">۰ نظر در انتظار</span>
+                                <span class="stat-badge approved" id="approvedReviewsCount">۰ نظر تأیید شده</span>
+                            </div>
+                        </div>
+                        
+                        <div class="reviews-container-admin">
+                            <div class="reviews-list" id="adminReviewsList">
+                                <!-- نظرات با JavaScript لود می‌شوند -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="admin-tab-content" id="servicesTab" style="display: none;">
+                        <div class="tab-header">
+                            <h2><i class="fas fa-concierge-bell"></i> مدیریت خدمات</h2>
+                            <button class="btn-admin btn-primary" onclick="showAddServiceModal()">
+                                <i class="fas fa-plus"></i> افزودن خدمت جدید
+                            </button>
+                        </div>
+                        
+                        <div class="services-grid-admin">
+                            <!-- خدمات با JavaScript لود می‌شوند -->
+                        </div>
+                    </div>
+
+                    <div class="admin-tab-content" id="settingsTab" style="display: none;">
+                        <div class="tab-header">
+                            <h2><i class="fas fa-cog"></i> تنظیمات سیستم</h2>
+                        </div>
+                        
+                        <div class="settings-grid">
+                            <div class="settings-card">
+                                <h3><i class="fas fa-lock"></i> امنیت</h3>
+                                <div class="setting-item">
+                                    <label>رمز مدیریت فعلی:</label>
+                                    <div class="password-display">
+                                        <span id="currentPassword">••••••••</span>
+                                        <button class="btn-small" onclick="changePassword()">
+                                            <i class="fas fa-edit"></i> تغییر
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="setting-item">
+                                    <label>تاریخچه ورود:</label>
+                                    <div class="login-history">
+                                        <div class="login-record">
+                                            <i class="fas fa-user-circle"></i>
+                                            <div>
+                                                <span>مدیریت - شما</span>
+                                                <small>امروز ۱۴:۳۰</small>
+                                            </div>
+                                            <span class="status success">موفق</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-card">
+                                <h3><i class="fas fa-bell"></i> اعلان‌ها</h3>
+                                <div class="setting-item">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>اعلان نوبت‌های جدید</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="setting-item">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>اعلان نظرهای جدید</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="setting-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>ایمیل روزانه گزارش</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-card">
+                                <h3><i class="fas fa-chart-line"></i> گزارش‌گیری</h3>
+                                <div class="setting-item">
+                                    <label>دوره گزارش:</label>
+                                    <select>
+                                        <option>هفتگی</option>
+                                        <option>ماهیانه</option>
+                                        <option>سه‌ماهیانه</option>
+                                        <option>سالانه</option>
+                                    </select>
+                                </div>
+                                
+                                <button class="btn-admin btn-primary" onclick="generateReport()">
+                                    <i class="fas fa-file-pdf"></i> تولید گزارش PDF
+                                </button>
+                                
+                                <button class="btn-admin btn-secondary" onclick="exportData()">
+                                    <i class="fas fa-file-excel"></i> خروجی داده‌ها
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مودال‌ها -->
+        <div id="addAppointmentModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-calendar-plus"></i> افزودن نوبت جدید</h3>
+                    <button class="modal-close" onclick="closeModal('addAppointmentModal')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="adminAppointmentForm">
+                        <div class="form-group">
+                            <label>نام مشتری:</label>
+                            <input type="text" id="adminCustomerName" required placeholder="نام کامل مشتری">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>شماره تماس:</label>
+                            <input type="tel" id="adminCustomerPhone" required placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>نوع خدمت:</label>
+                            <select id="adminServiceType" required>
+                                <option value="">انتخاب کنید</option>
+                                <option value="آرایش مو">آرایش مو</option>
+                                <option value="مراقبت پوست">مراقبت پوست</option>
+                                <option value="آرایش صورت">آرایش صورت</option>
+                                <option value="ناخن‌کاری">ناخن‌کاری</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>تاریخ:</label>
+                                <input type="text" id="adminAppointmentDate" required placeholder="۱۴۰۲/۰۹/۱۵">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>ساعت:</label>
+                                <input type="text" id="adminAppointmentTime" required placeholder="۱۰:۰۰">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>وضعیت:</label>
+                            <select id="adminAppointmentStatus">
+                                <option value="در انتظار">در انتظار</option>
+                                <option value="تأیید شده">تأیید شده</option>
+                                <option value="لغو شده">لغو شده</option>
+                                <option value="انجام شده">انجام شده</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>توضیحات (اختیاری):</label>
+                            <textarea id="adminAppointmentNotes" rows="3" placeholder="توضیحات اضافی..."></textarea>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <button type="submit" class="btn-admin btn-primary">
+                                <i class="fas fa-save"></i> ذخیره نوبت
+                            </button>
+                            <button type="button" class="btn-admin btn-secondary" onclick="closeModal('addAppointmentModal')">
+                                <i class="fas fa-times"></i> انصراف
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- مودال افزودن خدمت -->
+        <div id="addServiceModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-plus-circle"></i> افزودن خدمت جدید</h3>
+                    <button class="modal-close" onclick="closeModal('addServiceModal')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="adminServiceForm">
+                        <div class="form-group">
+                            <label>نام خدمت:</label>
+                            <input type="text" id="adminServiceName" required placeholder="مثال: کراتینه مو">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>دسته‌بندی:</label>
+                            <select id="adminServiceCategory" required>
+                                <option value="hair">آرایش مو</option>
+                                <option value="skin">مراقبت پوست</option>
+                                <option value="makeup">آرایش صورت</option>
+                                <option value="nails">ناخن‌کاری</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>قیمت پایه:</label>
+                            <input type="text" id="adminServicePrice" required placeholder="مثال: 250,000 تومان">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>مدت زمان تقریبی:</label>
+                            <input type="text" id="adminServiceDuration" required placeholder="مثال: ۱.۵ ساعت">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>توضیحات:</label>
+                            <textarea id="adminServiceDescription" rows="4" required placeholder="توضیحات کامل خدمت..."></textarea>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <button type="submit" class="btn-admin btn-primary">
+                                <i class="fas fa-save"></i> ذخیره خدمت
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- مودال ویرایش خدمت -->
+        <div id="editServiceModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-edit"></i> ویرایش خدمت</h3>
+                    <button class="modal-close" onclick="closeModal('editServiceModal')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editServiceForm">
+                        <input type="hidden" id="editServiceId">
+                        
+                        <div class="form-group">
+                            <label>نام خدمت:</label>
+                            <input type="text" id="editServiceName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>دسته‌بندی:</label>
+                            <select id="editServiceCategory" required>
+                                <option value="hair">آرایش مو</option>
+                                <option value="skin">مراقبت پوست</option>
+                                <option value="makeup">آرایش صورت</option>
+                                <option value="nails">ناخن‌کاری</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>قیمت:</label>
+                            <input type="text" id="editServicePrice" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>مدت زمان:</label>
+                            <input type="text" id="editServiceDuration" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>توضیحات:</label>
+                            <textarea id="editServiceDescription" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <button type="submit" class="btn-admin btn-primary">
+                                <i class="fas fa-save"></i> ذخیره تغییرات
+                            </button>
+                            <button type="button" class="btn-admin btn-secondary" onclick="closeModal('editServiceModal')">
+                                <i class="fas fa-times"></i> انصراف
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- اسکریپت‌ها -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // راه‌اندازی AOS برای انیمیشن‌های اسکرول
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+<script type="text/javascript" id="dcoder_script">// داده‌های نمونه
+let appointments = [];
+let customers = [];
+let services = [];
+let reviews = [];
+let isAdminMode = false;
+const ADMIN_PASSWORD = "Abcd1234";
+
+// اطلاعات اولیه
+const initialData = {
+    appointments: [
+        { 
+            id: 1001, 
+            customerName: "فاطمه محمدی", 
+            phone: "09123456789", 
+            service: "آرایش مو", 
+            date: "۱۴۰۲/۰۹/۱۵", 
+            time: "10:00", 
+            status: "تأیید شده", 
+            notes: "",
+            createdAt: "2023-12-01T10:00:00.000Z"
+        },
+        { 
+            id: 1002, 
+            customerName: "سارا احمدی", 
+            phone: "09129876543", 
+            service: "مراقبت پوست", 
+            date: "۱۴۰۲/۰۹/۱۵", 
+            time: "11:00", 
+            status: "در انتظار", 
+            notes: "",
+            createdAt: "2023-12-01T11:00:00.000Z"
+        },
+        { 
+            id: 1003, 
+            customerName: "زهرا کریمی", 
+            phone: "09121234567", 
+            service: "ناخن‌کاری", 
+            date: "۱۴۰۲/۰۹/۱۵", 
+            time: "14:00", 
+            status: "تأیید شده", 
+            notes: "طراحی خاص",
+            createdAt: "2023-12-01T14:00:00.000Z"
+        }
+    ],
+    customers: [
+        { 
+            id: 1, 
+            fullName: "فاطمه محمدی", 
+            phone: "09123456789", 
+            joinDate: "۱۴۰۲/۰۸/۱۰", 
+            appointmentsCount: 5, 
+            totalSpent: "1,200,000 تومان", 
+            rating: 5 
+        },
+        { 
+            id: 2, 
+            fullName: "سارا احمدی", 
+            phone: "09129876543", 
+            joinDate: "۱۴۰۲/۰۷/۲۲", 
+            appointmentsCount: 3, 
+            totalSpent: "850,000 تومان", 
+            rating: 4 
+        },
+        { 
+            id: 3, 
+            fullName: "زهرا کریمی", 
+            phone: "09121234567", 
+            joinDate: "۱۴۰۲/۰۹/۰۱", 
+            appointmentsCount: 2, 
+            totalSpent: "400,000 تومان", 
+            rating: 5 
+        }
+    ],
+    services: [
+        { 
+            id: 1, 
+            name: "آرایش مو", 
+            price: "از 150,000 تومان", 
+            duration: "۱-۲ ساعت", 
+            category: "hair", 
+            description: "کوتاهی، رنگ، هایلایت، مش و انواع خدمات تخصصی" 
+        },
+        { 
+            id: 2, 
+            name: "مراقبت پوست", 
+            price: "از 300,000 تومان", 
+            duration: "۱-۱.۵ ساعت", 
+            category: "skin", 
+            description: "فیشیال، میکرودرم، لیزر و انواع خدمات پوستی" 
+        },
+        { 
+            id: 3, 
+            name: "آرایش صورت", 
+            price: "از 200,000 تومان", 
+            duration: "۱-۲ ساعت", 
+            category: "makeup", 
+            description: "آرایش عروس، آرایش شب، آرایش روز" 
+        },
+        { 
+            id: 4, 
+            name: "ناخن‌کاری", 
+            price: "از 120,000 تومان", 
+            duration: "۱-۱.۵ ساعت", 
+            category: "nails", 
+            description: "مانیکور، پدیکور، ناخن مصنوعی، ژلیش" 
+        }
+    ],
+    reviews: [
+        { 
+            id: 1, 
+            name: "فاطمه محمدی", 
+            service: "آرایش مو", 
+            rating: 5, 
+            comment: "خیلی عالی بود! آرایشگر خیلی با دقت و حرفه‌ای کار کرد.", 
+            date: "۱۴۰۲/۰۹/۱۴", 
+            status: "تأیید شده",
+            createdAt: "2023-11-30T14:30:00.000Z"
+        },
+        { 
+            id: 2, 
+            name: "سارا احمدی", 
+            service: "مراقبت پوست", 
+            rating: 4, 
+            comment: "محیط تمیز و پرسنل خوش برخورد. نتیجه کار راضیم کرد.", 
+            date: "۱۴۰۲/۰۹/۱۳", 
+            status: "تأیید شده",
+            createdAt: "2023-11-29T10:15:00.000Z"
+        },
+        { 
+            id: 3, 
+            name: "زهرا کریمی", 
+            service: "ناخن‌کاری", 
+            rating: 5, 
+            comment: "طراحی ناخن عالی بود. حتما دوباره مراجعه می‌کنم.", 
+            date: "۱۴۰۲/۰۹/۱۲", 
+            status: "در انتظار",
+            createdAt: "2023-11-28T16:45:00.000Z"
+        }
+    ]
+};
+
+// تابع کمکی برای تاریخ امروز
+function getTodayDate() {
+    const today = new Date();
+    const year = today.getFullYear() - 621; // تبدیل به شمسی (تقریبی)
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    const day = today.getDate().toString().padStart(2, '0');
+    return `${year}/${month}/${day}`;
+}
+
+// بارگذاری داده‌ها از localStorage
+function loadData() {
+    const savedAppointments = localStorage.getItem('beautySalonAppointments');
+    const savedCustomers = localStorage.getItem('beautySalonCustomers');
+    const savedServices = localStorage.getItem('beautySalonServices');
+    const savedReviews = localStorage.getItem('beautySalonReviews');
+    
+    appointments = savedAppointments ? JSON.parse(savedAppointments) : initialData.appointments;
+    customers = savedCustomers ? JSON.parse(savedCustomers) : initialData.customers;
+    services = savedServices ? JSON.parse(savedServices) : initialData.services;
+    reviews = savedReviews ? JSON.parse(savedReviews) : initialData.reviews;
+    
+    // همیشه با حالت مشتری شروع کن
+    isAdminMode = false;
+    switchToCustomerMode();
+}
+
+// ذخیره داده‌ها در localStorage
+function saveData() {
+    localStorage.setItem('beautySalonAppointments', JSON.stringify(appointments));
+    localStorage.setItem('beautySalonCustomers', JSON.stringify(customers));
+    localStorage.setItem('beautySalonServices', JSON.stringify(services));
+    localStorage.setItem('beautySalonReviews', JSON.stringify(reviews));
+    localStorage.setItem('beautySalonAdminMode', isAdminMode.toString());
+}
+
+// نمایش اعلان
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type} animate__animated animate__fadeInDown`;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px 25px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        z-index: 3000;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        font-family: 'Vazirmatn', sans-serif;
+    `;
+    
+    let icon = '✓';
+    
+    if (type === 'success') {
+        notification.style.background = 'linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(102, 187, 106, 0.9))';
+    } else if (type === 'error') {
+        icon = '✗';
+        notification.style.background = 'linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9))';
+    } else if (type === 'info') {
+        icon = 'ℹ';
+        notification.style.background = 'linear-gradient(135deg, rgba(33, 150, 243, 0.9), rgba(66, 165, 245, 0.9))';
+    } else if (type === 'warning') {
+        icon = '⚠';
+        notification.style.background = 'linear-gradient(135deg, rgba(255, 152, 0, 0.9), rgba(255, 167, 38, 0.9))';
+    }
+    
+    notification.innerHTML = `
+        <span style="font-size: 20px;">${icon}</span>
+        <span>${message}</span>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // انیمیشن خروج
+    setTimeout(() => {
+        notification.classList.remove('animate__fadeInDown');
+        notification.classList.add('animate__fadeOutUp');
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
+// فرم نوبت‌گیری جدید با تاریخ number
+document.getElementById('appointmentForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const fullname = document.getElementById('fullname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value.trim();
+    const day = document.getElementById('day').value;
+    const month = document.getElementById('month').value;
+    const year = document.getElementById('year').value;
+    const time = document.getElementById('time').value;
+    const notes = document.getElementById('notes').value.trim();
+    
+    // اعتبارسنجی فارسی
+    if (!fullname) {
+        showNotification('لطفا نام و نام خانوادگی را وارد کنید', 'error');
+        return;
+    }
+    
+    // اعتبارسنجی شماره تلفن
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (!phoneDigits || !/^09\d{9}$/.test(phoneDigits)) {
+        showNotification('لطفا شماره تلفن معتبر وارد کنید (۰۹۱۲۳۴۵۶۷۸۹)', 'error');
+        return;
+    }
+    
+    if (!service) {
+        showNotification('لطفا نوع خدمت را وارد کنید', 'error');
+        return;
+    }
+    
+    // اعتبارسنجی تاریخ
+    if (!day || !month || !year) {
+        showNotification('لطفا تاریخ کامل را وارد کنید', 'error');
+        return;
+    }
+    
+    if (day < 1 || day > 31) {
+        showNotification('روز باید بین ۱ تا ۳۱ باشد', 'error');
+        return;
+    }
+    
+    if (month < 1 || month > 12) {
+        showNotification('ماه باید بین ۱ تا ۱۲ باشد', 'error');
+        return;
+    }
+    
+    if (year < 1400 || year > 1500) {
+        showNotification('سال باید بین ۱۴۰۰ تا ۱۵۰۰ باشد', 'error');
+        return;
+    }
+    
+    // اعتبارسنجی ساعت
+    if (!time || time < 9 || time > 18) {
+        showNotification('لطفا ساعت معتبر بین ۹ تا ۱۸ وارد کنید', 'error');
+        return;
+    }
+    
+    // ساخت تاریخ فارسی
+    const persianDate = `${year}/${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}`;
+    
+    // ایجاد نوبت جدید
+    const newAppointment = {
+        id: Date.now(),
+        customerName: fullname,
+        phone: phoneDigits,
+        service: service,
+        date: persianDate,
+        time: `${time}:00`,
+        notes: notes,
+        status: 'در انتظار',
+        createdAt: new Date().toISOString()
+    };
+    
+    appointments.push(newAppointment);
+    
+    // بررسی وجود مشتری
+    let existingCustomer = customers.find(c => c.phone === phoneDigits);
+    if (existingCustomer) {
+        existingCustomer.appointmentsCount++;
+    } else {
+        const newCustomer = {
+            id: customers.length + 1,
+            fullName: fullname,
+            phone: phoneDigits,
+            joinDate: getTodayDate(),
+            appointmentsCount: 1,
+            totalSpent: "0 تومان",
+            rating: 0
+        };
+        customers.push(newCustomer);
+    }
+    
+    saveData();
+    updateUI();
+    
+    // ریست فرم
+    document.getElementById('appointmentForm').reset();
+    
+    // تنظیم تاریخ پیشفرض به فردا
+    setDefaultDate();
+    
+    showNotification(`نوبت شما برای ${service} در تاریخ ${persianDate} ساعت ${time} ثبت شد`);
+});
+
+// تنظیم تاریخ پیشفرض به فردا
+function setDefaultDate() {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    
+    // برای تاریخ شمسی (نمونه)
+    const year = 1402; // سال فعلی شمسی
+    const month = 9; // ماه فعلی شمسی
+    const day = tomorrow.getDate();
+    
+    if (document.getElementById('day')) {
+        document.getElementById('day').value = day;
+        document.getElementById('month').value = month;
+        document.getElementById('year').value = year;
+    }
+}
+
+// سیستم امتیازدهی
+let selectedRating = 0;
+
+// راه‌اندازی ستاره‌های امتیازدهی
+function setupStarRating() {
+    const stars = document.querySelectorAll('.stars i');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = parseInt(this.getAttribute('data-rating'));
+            selectedRating = rating;
+            updateStarDisplay(rating);
+        });
+        
+        star.addEventListener('mouseover', function() {
+            const rating = parseInt(this.getAttribute('data-rating'));
+            highlightStars(rating);
+        });
+        
+        star.addEventListener('mouseout', function() {
+            updateStarDisplay(selectedRating);
+        });
+    });
+}
+
+function highlightStars(rating) {
+    const stars = document.querySelectorAll('.stars i');
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('active');
+        } else {
+            star.classList.remove('active');
+        }
+    });
+}
+
+function updateStarDisplay(rating) {
+    const stars = document.querySelectorAll('.stars i');
+    const ratingText = document.getElementById('selectedRatingText');
+    
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('active');
+            star.classList.remove('far');
+            star.classList.add('fas');
+        } else {
+            star.classList.remove('active');
+            star.classList.remove('fas');
+            star.classList.add('far');
+        }
+    });
+    
+    const ratingTexts = [
+        "هیچ امتیازی انتخاب نشده",
+        "خیلی بد",
+        "بد",
+        "متوسط",
+        "خوب",
+        "عالی"
+    ];
+    
+    if (ratingText) {
+        ratingText.textContent = ratingTexts[rating];
+    }
+}
+
+// ثبت نظر
+function submitReview() {
+    const name = document.getElementById('reviewName')?.value.trim();
+    const comment = document.getElementById('reviewComment')?.value.trim();
+    const service = document.getElementById('reviewService')?.value;
+    
+    if (!name) {
+        showNotification('لطفا نام خود را وارد کنید', 'error');
+        return;
+    }
+    
+    if (selectedRating === 0) {
+        showNotification('لطفا امتیاز خود را انتخاب کنید', 'error');
+        return;
+    }
+    
+    if (!comment) {
+        showNotification('لطفا نظر خود را بنویسید', 'error');
+        return;
+    }
+    
+    if (!service) {
+        showNotification('لطفا نوع خدمت را انتخاب کنید', 'error');
+        return;
+    }
+    
+    const newReview = {
+        id: reviews.length + 1,
+        name: name,
+        service: service,
+        rating: selectedRating,
+        comment: comment,
+        date: getTodayDate(),
+        status: 'در انتظار',
+        createdAt: new Date().toISOString()
+    };
+    
+    reviews.push(newReview);
+    saveData();
+    loadReviews();
+    
+    // ریست فرم
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewComment').value = '';
+    document.getElementById('reviewService').value = '';
+    selectedRating = 0;
+    updateStarDisplay(0);
+    
+    showNotification('نظر و امتیاز شما با موفقیت ثبت شد و در انتظار تأیید مدیریت است');
+}
+
+// بارگذاری نظرات
+function loadReviews() {
+    const reviewsGrid = document.getElementById('reviewsGrid');
+    if (!reviewsGrid) return;
+    
+    reviewsGrid.innerHTML = '';
+    
+    const approvedReviews = reviews.filter(r => r.status === 'تأیید شده');
+    
+    if (approvedReviews.length === 0) {
+        reviewsGrid.innerHTML = '<p class="no-reviews">هنوز نظری ثبت نشده است.</p>';
+        return;
+    }
+    
+    // نمایش ۶ نظر آخر
+    const recentReviews = approvedReviews.slice(-6).reverse();
+    
+    recentReviews.forEach(review => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card fade-in';
+        
+        let stars = '';
+        for (let i = 1; i <= 5; i++) {
+            if (i <= review.rating) {
+                stars += '<i class="fas fa-star"></i>';
+            } else {
+                stars += '<i class="far fa-star"></i>';
+            }
+        }
+        
+        // ایجاد حرف اول نام
+        const firstLetter = review.name.charAt(0);
+        
+        reviewCard.innerHTML = `
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">${firstLetter}</div>
+                    <div>
+                        <div class="reviewer-name">${review.name}</div>
+                        <div class="review-service">${review.service}</div>
+                    </div>
+                </div>
+                <div class="review-stars">${stars}</div>
+            </div>
+            <div class="review-content">${review.comment}</div>
+            <div class="review-date">${review.date}</div>
+        `;
+        
+        reviewsGrid.appendChild(reviewCard);
+    });
+}
+
+// مدیریت حالت کاربر/مدیریت
+function setupUserModeToggle() {
+    const userToggle = document.getElementById('userToggle');
+    const userDropdown = document.getElementById('userDropdown');
+    
+    if (userToggle && userDropdown) {
+        userToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // بستن دراپ‌داون با کلیک بیرون
+        document.addEventListener('click', function() {
+            userDropdown.style.display = 'none';
+        });
+        
+        userDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+    
+    const adminLoginSection = document.getElementById('adminLoginSection');
+    if (adminLoginSection) {
+        adminLoginSection.style.display = 'none';
+    }
+}
+
+function showAdminLogin() {
+    const adminLoginSection = document.getElementById('adminLoginSection');
+    const customerMode = document.querySelector('.user-mode-option[data-mode="customer"]');
+    const adminMode = document.querySelector('.user-mode-option[data-mode="admin"]');
+    
+    if (adminLoginSection && customerMode && adminMode) {
+        adminLoginSection.style.display = 'block';
+        customerMode.classList.remove('active');
+        adminMode.classList.add('active');
+    }
+}
+
+function setUserMode(mode) {
+    const adminLoginSection = document.getElementById('adminLoginSection');
+    const customerMode = document.querySelector('.user-mode-option[data-mode="customer"]');
+    const adminMode = document.querySelector('.user-mode-option[data-mode="admin"]');
+    
+    if (adminLoginSection && customerMode && adminMode) {
+        adminLoginSection.style.display = 'none';
+        
+        if (mode === 'customer') {
+            customerMode.classList.add('active');
+            adminMode.classList.remove('active');
+            
+            if (isAdminMode) {
+                isAdminMode = false;
+                switchToCustomerMode();
+                showNotification('حالت مشتری فعال شد', 'info');
+            }
+        }
+    }
+}
+
+// ورود به حالت مدیریت
+function loginAsAdmin() {
+    const passwordInput = document.getElementById('adminPassword');
+    const password = passwordInput?.value;
+    
+    if (password === ADMIN_PASSWORD) {
+        isAdminMode = true;
+        switchToAdminMode();
+        passwordInput.value = '';
+        const adminLoginSection = document.getElementById('adminLoginSection');
+        if (adminLoginSection) {
+            adminLoginSection.style.display = 'none';
+        }
+        showNotification('ورود به پنل مدیریت موفقیت‌آمیز بود', 'success');
+    } else {
+        showNotification('رمز مدیریت اشتباه است', 'error');
+    }
+}
+
+// تغییر به حالت مدیریت
+function switchToAdminMode() {
+    document.getElementById('customerPage').style.display = 'none';
+    document.getElementById('adminPage').style.display = 'block';
+    document.getElementById('userStatus').textContent = 'مدیریت';
+    document.getElementById('userStatus').style.color = '#ffd700';
+    
+    // بروزرسانی داشبورد مدیریت
+    updateAdminDashboard();
+}
+
+// تغییر به حالت مشتری
+function switchToCustomerMode() {
+    document.getElementById('customerPage').style.display = 'block';
+    document.getElementById('adminPage').style.display = 'none';
+    document.getElementById('userStatus').textContent = 'مشتری';
+    document.getElementById('userStatus').style.color = '#ffffff';
+    
+    // بروزرسانی UI مشتری
+    updateUI();
+}
+
+// فیلتر گالری
+function setupGalleryFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // حذف کلاس active از همه دکمه‌ها
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // اضافه کردن کلاس active به دکمه کلیک شده
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            galleryItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+// باز کردن صفحه خدمات
+function openServicePage(serviceType) {
+    const overlayId = serviceType + 'ServiceOverlay';
+    const overlay = document.getElementById(overlayId);
+    
+    if (overlay) {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// بستن صفحه خدمات
+function closeServicePage() {
+    document.querySelectorAll('.service-page-overlay').forEach(overlay => {
+        overlay.style.display = 'none';
+    });
+    document.body.style.overflow = 'auto';
+}
+
+// اسکرول به بخش نوبت‌گیری
+function scrollToBooking() {
+    closeServicePage();
+    setTimeout(() => {
+        document.getElementById('booking').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }, 300);
+}
+
+// بروزرسانی کلی UI
+function updateUI() {
+    // آمار مشتریان
+    const totalCustomersElement = document.getElementById('totalCustomers');
+    if (totalCustomersElement) {
+        totalCustomersElement.textContent = customers.length;
+    }
+    
+    // بارگذاری نظرات
+    loadReviews();
+    
+    // بارگذاری گالری
+    setupGalleryFilter();
+}
+
+// تنظیم پیش‌لودر
+function setupPreloader() {
+    const preloader = document.createElement('div');
+    preloader.className = 'preloader';
+    preloader.innerHTML = '<div class="loader"></div>';
+    document.body.appendChild(preloader);
+    
+    // پنهان کردن پیش‌لودر بعد از بارگذاری
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.remove();
+            }, 500);
+        }, 1000);
+    });
+}
+
+// بهبود UX فرم فارسی
+function setupFormUX() {
+    // اعتبارسنجی بلادرنگ برای شماره تلفن
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function() {
+            const value = this.value.replace(/\D/g, '');
+            this.value = value.replace(/(\d{4})(\d{3})(\d{4})/, '$1 $2 $3');
+            
+            if (value.length === 11 && value.startsWith('09')) {
+                this.classList.add('valid');
+                this.classList.remove('invalid');
+            } else {
+                this.classList.remove('valid');
+                this.classList.add('invalid');
+            }
+        });
+    }
+    
+    // اعتبارسنجی بلادرنگ برای ساعت
+    const timeInput = document.getElementById('time');
+    if (timeInput) {
+        timeInput.addEventListener('input', function() {
+            const value = parseInt(this.value);
+            if (value >= 9 && value <= 18) {
+                this.classList.add('valid');
+                this.classList.remove('invalid');
+            } else {
+                this.classList.remove('valid');
+                this.classList.add('invalid');
+            }
+        });
+    }
+    
+    // اعتبارسنجی تاریخ
+    const dayInput = document.getElementById('day');
+    const monthInput = document.getElementById('month');
+    const yearInput = document.getElementById('year');
+    
+    [dayInput, monthInput, yearInput].forEach(input => {
+        if (input) {
+            input.addEventListener('input', function() {
+                validateDate();
+            });
+        }
+    });
+}
+
+function validateDate() {
+    const day = parseInt(document.getElementById('day')?.value) || 0;
+    const month = parseInt(document.getElementById('month')?.value) || 0;
+    const year = parseInt(document.getElementById('year')?.value) || 0;
+    
+    const isValid = day >= 1 && day <= 31 && 
+                   month >= 1 && month <= 12 && 
+                   year >= 1400 && year <= 1500;
+    
+    const inputs = [document.getElementById('day'), 
+                   document.getElementById('month'), 
+                   document.getElementById('year')];
+    
+    inputs.forEach(input => {
+        if (input) {
+            if (isValid && input.value) {
+                input.classList.add('valid');
+                input.classList.remove('invalid');
+            } else if (input.value) {
+                input.classList.remove('valid');
+                input.classList.add('invalid');
+            } else {
+                input.classList.remove('valid', 'invalid');
+            }
+        }
+    });
+}
+
+// توابع پنل مدیریت
+function updateAdminDashboard() {
+    const today = getTodayDate();
+    
+    // نوبت‌های امروز
+    const todayApps = appointments.filter(app => app.date === today);
+    const adminTodayCount = document.getElementById('adminTodayCount');
+    if (adminTodayCount) {
+        adminTodayCount.textContent = todayApps.length;
+    }
+    
+    // کل مشتریان
+    const adminTotalCustomers = document.getElementById('adminTotalCustomers');
+    if (adminTotalCustomers) {
+        adminTotalCustomers.textContent = customers.length;
+    }
+    
+    // درآمد امروز (محاسبه فرضی)
+    const todayIncome = todayApps.length * 150000;
+    const adminTodayIncome = document.getElementById('adminTodayIncome');
+    if (adminTodayIncome) {
+        adminTodayIncome.textContent = todayIncome.toLocaleString('fa-IR') + ' تومان';
+    }
+    
+    // میانگین امتیاز
+    const approvedReviews = reviews.filter(r => r.status === 'تأیید شده');
+    const avgRating = approvedReviews.length > 0 ? 
+        (approvedReviews.reduce((sum, r) => sum + r.rating, 0) / approvedReviews.length).toFixed(1) : '۰';
+    const adminAvgRating = document.getElementById('adminAvgRating');
+    if (adminAvgRating) {
+        adminAvgRating.textContent = avgRating;
+    }
+    
+    // آمار نظرات
+    const pendingReviews = reviews.filter(r => r.status === 'در انتظار').length;
+    const approvedReviewsCount = approvedReviews.length;
+    const pendingReviewsCountElement = document.getElementById('pendingReviewsCount');
+    const approvedReviewsCountElement = document.getElementById('approvedReviewsCount');
+    
+    if (pendingReviewsCountElement) {
+        pendingReviewsCountElement.textContent = pendingReviews + ' نظر در انتظار';
+    }
+    if (approvedReviewsCountElement) {
+        approvedReviewsCountElement.textContent = approvedReviewsCount + ' نظر تأیید شده';
+    }
+    
+    // آپدیت جداول
+    loadAppointmentsTable();
+    loadCustomersTable();
+    loadReviewsAdmin();
+    loadServicesAdmin();
+    
+    // آپدیت زمان
+    updateAdminTime();
+}
+
+function updateAdminTime() {
+    const now = new Date();
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+    const persianDate = now.toLocaleDateString('fa-IR', options);
+    const adminCurrentTime = document.getElementById('adminCurrentTime');
+    if (adminCurrentTime) {
+        adminCurrentTime.textContent = persianDate;
+    }
+}
+
+// آپدیت زمان هر ثانیه
+setInterval(updateAdminTime, 1000);
+
+function openAdminTab(tabName) {
+    // مخفی کردن همه تب‌ها
+    document.querySelectorAll('.admin-tab-content').forEach(tab => {
+        tab.style.display = 'none';
+    });
+    
+    // حذف کلاس active از همه تب‌ها
+    document.querySelectorAll('.admin-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // نمایش تب انتخاب شده
+    const tabElement = document.getElementById(tabName + 'Tab');
+    if (tabElement) {
+        tabElement.style.display = 'block';
+    }
+    
+    // افزودن کلاس active به تب کلیک شده
+    event.currentTarget.classList.add('active');
+    
+    // رفرش داده‌های تب
+    if (tabName === 'appointments') loadAppointmentsTable();
+    if (tabName === 'customers') loadCustomersTable();
+    if (tabName === 'reviews') loadReviewsAdmin();
+    if (tabName === 'services') loadServicesAdmin();
+}
+
+function loadAppointmentsTable() {
+    const tbody = document.getElementById('appointmentsTableBody');
+    if (!tbody) return;
+    
+    tbody.innerHTML = '';
+    
+    appointments.forEach(appointment => {
+        const tr = document.createElement('tr');
+        
+        // تعیین رنگ وضعیت
+        let statusClass = '';
+        let statusIcon = '';
+        
+        switch(appointment.status) {
+            case 'تأیید شده':
+                statusClass = 'status-confirmed';
+                statusIcon = '✓';
+                break;
+            case 'در انتظار':
+                statusClass = 'status-pending';
+                statusIcon = '⏳';
+                break;
+            case 'لغو شده':
+                statusClass = 'status-cancelled';
+                statusIcon = '✗';
+                break;
+            case 'انجام شده':
+                statusClass = 'status-completed';
+                statusIcon = '✓';
+                break;
+        }
+        
+        tr.innerHTML = `
+            <td>${appointment.id}</td>
+            <td>${appointment.customerName}</td>
+            <td>${appointment.phone}</td>
+            <td>${appointment.service}</td>
+            <td>${appointment.date}</td>
+            <td>${appointment.time}</td>
+            <td><span class="status-badge ${statusClass}">${statusIcon} ${appointment.status}</span></td>
+            <td>${appointment.notes || '-'}</td>
+            <td class="actions-cell">
+                <button class="btn-action btn-edit" onclick="editAppointment(${appointment.id})" title="ویرایش">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-action btn-delete" onclick="deleteAppointment(${appointment.id})" title="حذف">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button class="btn-action btn-confirm" onclick="confirmAppointment(${appointment.id})" title="تأیید نوبت">
+                    <i class="fas fa-check"></i>
+                </button>
+            </td>
+        `;
+        
+        tbody.appendChild(tr);
+    });
+}
+
+function loadCustomersTable() {
+    const tbody = document.getElementById('customersTableBody');
+    if (!tbody) return;
+    
+    tbody.innerHTML = '';
+    
+    customers.forEach(customer => {
+        const tr = document.createElement('tr');
+        
+        // ایجاد ستاره‌های امتیاز
+        let stars = '';
+        for (let i = 1; i <= 5; i++) {
+            if (i <= customer.rating) {
+                stars += '<i class="fas fa-star"></i>';
+            } else {
+                stars += '<i class="far fa-star"></i>';
+            }
+        }
+        
+        tr.innerHTML = `
+            <td>${customer.id}</td>
+            <td>${customer.fullName}</td>
+            <td>${customer.phone}</td>
+            <td>${customer.joinDate}</td>
+            <td>${customer.appointmentsCount}</td>
+            <td>${customer.totalSpent}</td>
+            <td><div class="customer-rating">${stars}</div></td>
+            <td class="actions-cell">
+                <button class="btn-action btn-view" onclick="viewCustomerDetails(${customer.id})" title="مشاهده جزئیات">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn-action btn-sms" onclick="sendSMSToCustomer('${customer.phone}')" title="ارسال پیام">
+                    <i class="fas fa-sms"></i>
+                </button>
+            </td>
+        `;
+        
+        tbody.appendChild(tr);
+    });
+}
+
+function loadReviewsAdmin() {
+    const container = document.getElementById('adminReviewsList');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    reviews.forEach(review => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card-admin';
+        
+        let stars = '';
+        for (let i = 1; i <= 5; i++) {
+            if (i <= review.rating) {
+                stars += '<i class="fas fa-star"></i>';
+            } else {
+                stars += '<i class="far fa-star"></i>';
+            }
+        }
+        
+        const statusClass = review.status === 'تأیید شده' ? 'approved' : 'pending';
+        
+        reviewCard.innerHTML = `
+            <div class="review-admin-header">
+                <div class="reviewer-info-admin">
+                    <div class="reviewer-avatar-admin">${review.name.charAt(0)}</div>
+                    <div>
+                        <div class="reviewer-name-admin">${review.name}</div>
+                        <div class="review-service-admin">${review.service}</div>
+                        <div class="review-date-admin">${review.date}</div>
+                    </div>
+                </div>
+                <div class="review-actions">
+                    <span class="review-status ${statusClass}">${review.status}</span>
+                    <div class="review-stars-admin">${stars}</div>
+                </div>
+            </div>
+            <div class="review-content-admin">${review.comment}</div>
+            <div class="review-admin-actions">
+                ${review.status === 'در انتظار' ? `
+                    <button class="btn-small btn-success" onclick="approveReview(${review.id})">
+                        <i class="fas fa-check"></i> تأیید
+                    </button>
+                    <button class="btn-small btn-danger" onclick="rejectReview(${review.id})">
+                        <i class="fas fa-times"></i> رد
+                    </button>
+                ` : ''}
+                <button class="btn-small btn-danger" onclick="deleteReview(${review.id})">
+                    <i class="fas fa-trash"></i> حذف
+                </button>
+            </div>
+        `;
+        
+        container.appendChild(reviewCard);
+    });
+}
+
+function loadServicesAdmin() {
+    const container = document.querySelector('.services-grid-admin');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    services.forEach(service => {
+        const serviceCard = document.createElement('div');
+        serviceCard.className = 'service-card-admin';
+        
+        let icon = '';
+        switch(service.category) {
+            case 'hair':
+                icon = 'fas fa-cut';
+                break;
+            case 'skin':
+                icon = 'fas fa-spa';
+                break;
+            case 'makeup':
+                icon = 'fas fa-palette';
+                break;
+            case 'nails':
+                icon = 'fas fa-hand-sparkles';
+                break;
+        }
+        
+        serviceCard.innerHTML = `
+            <div class="service-card-header">
+                <div class="service-icon-admin">
+                    <i class="${icon}"></i>
+                </div>
+                <h3>${service.name}</h3>
+                <span class="service-price-admin">${service.price}</span>
+            </div>
+            <div class="service-card-body">
+                <p>${service.description}</p>
+                <div class="service-meta">
+                    <span><i class="fas fa-clock"></i> ${service.duration}</span>
+                    <span><i class="fas fa-tag"></i> ${service.category === 'hair' ? 'آرایش مو' : 
+                                                     service.category === 'skin' ? 'مراقبت پوست' : 
+                                                     service.category === 'makeup' ? 'آرایش صورت' : 'ناخن‌کاری'}</span>
+                </div>
+            </div>
+            <div class="service-card-actions">
+                <button class="btn-small btn-edit" onclick="editService(${service.id})">
+                    <i class="fas fa-edit"></i> ویرایش
+                </button>
+                <button class="btn-small btn-danger" onclick="deleteService(${service.id})">
+                    <i class="fas fa-trash"></i> حذف
+                </button>
+            </div>
+        `;
+        
+        container.appendChild(serviceCard);
+    });
+}
+
+// عملیات مدیریت
+function showAddAppointmentModal() {
+    const modal = document.getElementById('addAppointmentModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function editAppointment(appointmentId) {
+    const appointment = appointments.find(a => a.id === appointmentId);
+    if (appointment) {
+        showNotification('ویرایش نوبت - این قابلیت در نسخه کامل فعال می‌شود', 'info');
+    }
+}
+
+function deleteAppointment(appointmentId) {
+    if (confirm('آیا از حذف این نوبت اطمینان دارید؟')) {
+        appointments = appointments.filter(a => a.id !== appointmentId);
+        saveData();
+        loadAppointmentsTable();
+        updateAdminDashboard();
+        showNotification('نوبت با موفقیت حذف شد', 'success');
+    }
+}
+
+function confirmAppointment(appointmentId) {
+    const appointment = appointments.find(a => a.id === appointmentId);
+    if (appointment) {
+        appointment.status = 'تأیید شده';
+        saveData();
+        loadAppointmentsTable();
+        showNotification('نوبت با موفقیت تأیید شد', 'success');
+    }
+}
+
+function approveReview(reviewId) {
+    const review = reviews.find(r => r.id === reviewId);
+    if (review) {
+        review.status = 'تأیید شده';
+        saveData();
+        loadReviewsAdmin();
+        updateAdminDashboard();
+        showNotification('نظر با موفقیت تأیید شد', 'success');
+    }
+}
+
+function rejectReview(reviewId) {
+    const review = reviews.find(r => r.id === reviewId);
+    if (review) {
+        review.status = 'رد شده';
+        saveData();
+        loadReviewsAdmin();
+        showNotification('نظر رد شد', 'info');
+    }
+}
+
+function deleteReview(reviewId) {
+    if (confirm('آیا از حذف این نظر اطمینان دارید؟')) {
+        reviews = reviews.filter(r => r.id !== reviewId);
+        saveData();
+        loadReviewsAdmin();
+        updateAdminDashboard();
+        showNotification('نظر با موفقیت حذف شد', 'success');
+    }
+}
+
+// تابع ویرایش خدمت
+function editService(serviceId) {
+    const service = services.find(s => s.id === serviceId);
+    if (service) {
+        showEditServiceModal(service);
+    }
+}
+
+// نمایش مودال ویرایش خدمت
+function showEditServiceModal(service) {
+    document.getElementById('editServiceId').value = service.id;
+    document.getElementById('editServiceName').value = service.name;
+    document.getElementById('editServiceCategory').value = service.category;
+    document.getElementById('editServicePrice').value = service.price;
+    document.getElementById('editServiceDuration').value = service.duration;
+    document.getElementById('editServiceDescription').value = service.description;
+    
+    const modal = document.getElementById('editServiceModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+// فرم ویرایش خدمت
+document.getElementById('editServiceForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const serviceId = parseInt(document.getElementById('editServiceId').value);
+    const serviceIndex = services.findIndex(s => s.id === serviceId);
+    
+    if (serviceIndex !== -1) {
+        services[serviceIndex] = {
+            ...services[serviceIndex],
+            name: document.getElementById('editServiceName').value,
+            category: document.getElementById('editServiceCategory').value,
+            price: document.getElementById('editServicePrice').value,
+            duration: document.getElementById('editServiceDuration').value,
+            description: document.getElementById('editServiceDescription').value
+        };
+        
+        saveData();
+        loadServicesAdmin();
+        closeModal('editServiceModal');
+        showNotification('خدمت با موفقیت ویرایش شد', 'success');
+        
+        // همچنین UI مشتری را آپدیت کن
+        updateCustomerServicesUI();
+    }
+});
+
+// آپدیت UI خدمات در صفحه مشتری
+function updateCustomerServicesUI() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        const serviceType = card.getAttribute('data-service');
+        const service = services.find(s => s.category === serviceType);
+        
+        if (service) {
+            const titleElement = card.querySelector('h3');
+            const priceElement = card.querySelector('.price');
+            const descElement = card.querySelector('p');
+            
+            if (titleElement) titleElement.textContent = getServicePersianName(service.category);
+            if (priceElement) priceElement.textContent = `از ${service.price}`;
+            if (descElement) descElement.textContent = service.description;
+        }
+    });
+}
+
+// تبدیل نام انگلیسی به فارسی
+function getServicePersianName(category) {
+    switch(category) {
+        case 'hair': return 'آرایش مو';
+        case 'skin': return 'مراقبت پوست';
+        case 'makeup': return 'آرایش صورت';
+        case 'nails': return 'ناخن‌کاری';
+        default: return 'خدمت';
+    }
+}
+
+function deleteService(serviceId) {
+    if (confirm('آیا از حذف این خدمت اطمینان دارید؟')) {
+        services = services.filter(s => s.id !== serviceId);
+        saveData();
+        loadServicesAdmin();
+        showNotification('خدمت با موفقیت حذف شد', 'success');
+    }
+}
+
+function showAddServiceModal() {
+    const modal = document.getElementById('addServiceModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function logoutAdmin() {
+    if (confirm('آیا از خروج از پنل مدیریت اطمینان دارید؟')) {
+        isAdminMode = false;
+        switchToCustomerMode();
+        showNotification('از پنل مدیریت خارج شدید', 'info');
+    }
+}
+
+// فیلتر و جستجو
+function filterAppointments() {
+    const filterValue = document.getElementById('appointmentFilter')?.value;
+    const rows = document.querySelectorAll('#appointmentsTableBody tr');
+    
+    rows.forEach(row => {
+        const statusCell = row.querySelector('.status-badge');
+        const status = statusCell ? statusCell.textContent.trim() : '';
+        
+        let shouldShow = true;
+        
+        if (filterValue === 'today') {
+            const dateCell = row.cells[4]?.textContent;
+            shouldShow = dateCell === getTodayDate();
+        } else if (filterValue === 'pending') {
+            shouldShow = status.includes('در انتظار');
+        } else if (filterValue === 'confirmed') {
+            shouldShow = status.includes('تأیید شده');
+        } else if (filterValue === 'cancelled') {
+            shouldShow = status.includes('لغو شده');
+        }
+        
+        row.style.display = shouldShow ? '' : 'none';
+    });
+}
+
+function searchAppointments() {
+    const searchTerm = document.getElementById('appointmentSearch')?.value.toLowerCase();
+    const rows = document.querySelectorAll('#appointmentsTableBody tr');
+    
+    rows.forEach(row => {
+        const customerName = row.cells[1]?.textContent.toLowerCase();
+        const phone = row.cells[2]?.textContent;
+        const service = row.cells[3]?.textContent.toLowerCase();
+        
+        const matches = customerName?.includes(searchTerm) || 
+                       phone?.includes(searchTerm) || 
+                       service?.includes(searchTerm);
+        
+        row.style.display = matches ? '' : 'none';
+    });
+}
+
+// فرم نوبت‌دهی مدیریت
+document.getElementById('adminAppointmentForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const newAppointment = {
+        id: Date.now(),
+        customerName: document.getElementById('adminCustomerName').value,
+        phone: document.getElementById('adminCustomerPhone').value,
+        service: document.getElementById('adminServiceType').value,
+        date: document.getElementById('adminAppointmentDate').value,
+        time: document.getElementById('adminAppointmentTime').value,
+        status: document.getElementById('adminAppointmentStatus').value,
+        notes: document.getElementById('adminAppointmentNotes').value,
+        createdAt: new Date().toISOString()
+    };
+    
+    appointments.push(newAppointment);
+    saveData();
+    loadAppointmentsTable();
+    updateAdminDashboard();
+    closeModal('addAppointmentModal');
+    this.reset();
+    
+    showNotification('نوبت جدید با موفقیت اضافه شد', 'success');
+});
+
+// فرم افزودن خدمت
+document.getElementById('adminServiceForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const newService = {
+        id: services.length + 1,
+        name: document.getElementById('adminServiceName').value,
+        category: document.getElementById('adminServiceCategory').value,
+        price: document.getElementById('adminServicePrice').value,
+        duration: document.getElementById('adminServiceDuration').value,
+        description: document.getElementById('adminServiceDescription').value
+    };
+    
+    services.push(newService);
+    saveData();
+    loadServicesAdmin();
+    closeModal('addServiceModal');
+    this.reset();
+    
+    showNotification('خدمت جدید با موفقیت اضافه شد', 'success');
+});
+
+// توابع کمکی دیگر
+function viewCustomerDetails(customerId) {
+    const customer = customers.find(c => c.id === customerId);
+    if (customer) {
+        alert(`جزئیات مشتری:\nنام: ${customer.fullName}\nتلفن: ${customer.phone}\nتاریخ عضویت: ${customer.joinDate}\nتعداد نوبت‌ها: ${customer.appointmentsCount}`);
+    }
+}
+
+function sendSMSToCustomer(phone) {
+    alert(`ارسال پیام به شماره ${phone}\nاین قابلیت در نسخه کامل فعال می‌شود`);
+}
+
+function exportCustomers() {
+    showNotification('خروجی Excel - این قابلیت در نسخه کامل فعال می‌شود', 'info');
+}
+
+function changePassword() {
+    const newPassword = prompt('رمز جدید را وارد کنید:');
+    if (newPassword && newPassword.length >= 4) {
+        showNotification('رمز با موفقیت تغییر کرد', 'success');
+    }
+}
+
+function generateReport() {
+    showNotification('تولید گزارش PDF - این قابلیت در نسخه کامل فعال می‌شود', 'info');
+}
+
+function exportData() {
+    showNotification('خروجی داده‌ها - این قابلیت در نسخه کامل فعال می‌شود', 'info');
+}
+
+// راه‌اندازی اولیه
+document.addEventListener('DOMContentLoaded', function() {
+    loadData();
+    setupPreloader();
+    setDefaultDate();
+    setupFormUX();
+    setupStarRating();
+    setupUserModeToggle();
+    setupGalleryFilter();
+    updateUI();
+    
+    // اضافه کردن استایل‌های اضافی برای فارسی
+    const style = document.createElement('style');
+    style.textContent = `
+        /* بهبود فارسی */
+        body {
+            text-align: right;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        input, textarea, select {
+            font-family: 'Vazirmatn', sans-serif !important;
+        }
+        
+        /* کلاس‌های اعتبارسنجی */
+        .valid {
+            border-color: #4caf50 !important;
+            background-color: rgba(76, 175, 80, 0.05) !important;
+        }
+        
+        .invalid {
+            border-color: #f44336 !important;
+            background-color: rgba(244, 67, 54, 0.05) !important;
+        }
+        
+        .hint-text {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            text-align: right;
+        }
+        
+        /* انیمیشن‌های اضافی */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .slide-in-up {
+            animation: slideInUp 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* جلوگیری از انتخاب متن در دکمه‌ها */
+        button, .btn, .btn-action, .btn-small, .btn-admin {
+            user-select: none;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // اضافه کردن کلاس loaded به body بعد از بارگذاری
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 1000);
+});
+
+// تابع برای نمایش مودال‌ها
+window.showAddAppointmentModal = showAddAppointmentModal;
+window.showAddServiceModal = showAddServiceModal;
+window.closeModal = closeModal;
+window.logoutAdmin = logoutAdmin;
+window.openAdminTab = openAdminTab;
+window.filterAppointments = filterAppointments;
+window.searchAppointments = searchAppointments;
+window.editAppointment = editAppointment;
+window.deleteAppointment = deleteAppointment;
+window.confirmAppointment = confirmAppointment;
+window.approveReview = approveReview;
+window.rejectReview = rejectReview;
+window.deleteReview = deleteReview;
+window.editService = editService;
+window.deleteService = deleteService;
+window.viewCustomerDetails = viewCustomerDetails;
+window.sendSMSToCustomer = sendSMSToCustomer;
+window.exportCustomers = exportCustomers;
+window.changePassword = changePassword;
+window.generateReport = generateReport;
+window.exportData = exportData;
+window.loginAsAdmin = loginAsAdmin;
+window.showAdminLogin = showAdminLogin;
+window.setUserMode = setUserMode;
+window.openServicePage = openServicePage;
+window.closeServicePage = closeServicePage;
+window.scrollToBooking = scrollToBooking;
+window.submitReview = submitReview;</script></body></html>
